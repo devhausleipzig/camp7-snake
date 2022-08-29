@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-square {
+    @apply w-[20px] h-[20px] bg-black box-border border border-solid border-gray-800;
+}
+
+.snake-square {
+    @apply bg-[chartreuse] box-border border border-solid border-[rgb(110,201,20)];
+}
+
+.apple-square {
+    @apply bg-red-600 border-2 border-solid border-white rounded-md;
+}
+
+.apple-square::before {
+    content: "";
+    width: 4px;
+    height: 12px;
+    position: absolute;
+    transform: skew(20deg) translate(5px, -7px);
+    background-color: brown;
+}
+
+.apple-square::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 20%;
+    z-index: 1;
+    position: absolute;
+    transform: translate(4px, -7.5px);
+    background-color: green;
+}
